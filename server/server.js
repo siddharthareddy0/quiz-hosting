@@ -52,6 +52,10 @@ app.get('/health', (req, res) => {
   res.json({ ok: true });
 });
 
+app.get('/api/health', (req, res) => {
+  res.json({ ok: true });
+});
+
 app.use('/api/auth', authRoutes);
 app.use('/api/tests', testRoutes);
 app.use('/api/attempts', attemptRoutes);
