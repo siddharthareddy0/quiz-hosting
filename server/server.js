@@ -18,6 +18,7 @@ import adminMonitoringRoutes from './routes/adminMonitoringRoutes.js';
 import adminMalpracticeRoutes from './routes/adminMalpracticeRoutes.js';
 import adminAttendanceRoutes from './routes/adminAttendanceRoutes.js';
 import adminResultsRoutes from './routes/adminResultsRoutes.js';
+import examSessionRoutes from './routes/examSessionRoutes.js';
 
 dotenv.config();
 
@@ -60,6 +61,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/tests', testRoutes);
 app.use('/api/attempts', attemptRoutes);
 app.use('/api/analysis', analysisRoutes);
+app.use('/api/exam', examSessionRoutes);
 
 app.use('/api/admin/auth', adminAuthRoutes);
 app.use('/api/admin/dashboard', adminDashboardRoutes);

@@ -26,6 +26,13 @@ const attemptSchema = new mongoose.Schema(
     startedAt: { type: Date, default: null },
     submittedAt: { type: Date, default: null },
     timeTakenSeconds: { type: Number, default: 0 },
+    currentQuestionIndex: { type: Number, default: 0 },
+    tabSwitchCount: { type: Number, default: 0 },
+    fullscreenExitCount: { type: Number, default: 0 },
+    examExitCount: { type: Number, default: 0 },
+    lastExitTimestamp: { type: Date, default: null },
+    isInRecovery: { type: Boolean, default: false },
+    deviceFingerprint: { type: String, default: '' },
     answers: { type: [answerSchema], default: [] },
     violations: { type: [violationSchema], default: [] },
     malpracticeStatus: {
